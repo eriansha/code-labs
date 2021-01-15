@@ -1,0 +1,81 @@
+AllCops:
+  # Rails Configuration
+  TargetRubyVersion: 2.5
+  Include:
+    - '**/Rakefile'
+  Exclude:
+    - !ruby/regexp /old_and_unused\.rb$/
+  NewCops: disable
+
+# LAYOUT COPS
+Layout/EmptyLinesAroundClassBody:
+   EnforcedStyle: 'empty_lines_except_namespace'
+
+Layout/LineLength:
+  Enabled: false
+
+Layout/TrailingWhitespace:
+  Enabled: false
+
+Layout/IndentationStyle:
+  IndentationWidth: 2,
+  EnforcedStyle: 'spaces'
+
+Layout/CaseIndentation:
+  EnforcedStyle: case # default
+  IndentOneStep: true,
+  IndentationWidth: 2
+
+# Hash Styles
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+# METRIC COPS
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+# STYLE COPS
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: 'single_quotes'
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: 'single_quotes'
+
+Style/SymbolArray:
+  EnforcedStyle: 'brackets'
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/AndOr:
+  EnforcedStyle: 'conditionals'
+
+Style/ParenthesesAroundCondition:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
