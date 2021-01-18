@@ -2,13 +2,14 @@ class AbstractDataType
   class Stack
     class StackWithArray
 
+      attr_reader :size
+
       def initialize
         @stack = []
         @size = 0
       end
 
       def empty?
-        puts @size
         @size.zero?
       end
 
@@ -18,6 +19,8 @@ class AbstractDataType
       end
 
       def pop
+        raise NoMemoryError.new('Underflow stack.') if @stack.empty?
+
         @size -= 1
         @stack.pop
       end
@@ -26,8 +29,8 @@ class AbstractDataType
         @stack[@size - 1]
       end
 
-      def to_s
-        @stack.reverse_each { |value| puts value }
+      def to_a
+        @stack
       end
 
     end
